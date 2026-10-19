@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Calculadora de tienda</title>
+</head>
+<body>
+	<h1>Calculadora de tienda</h1>
+	<div id="resultado"></div>
+
+	<script>
+		// Pedimos los valores al usuario
+		let producto = (prompt("ingrese el nombre del producto: "));
+		let precio = Number(prompt("ingrese el precio del producto: "));
+		let cantidad = Number(prompt("ingrese la cantidad del producto: "));
+
+
+	
+	let subtotal = precio * cantidad;
+	
+	let resultado = "";
+
+	Descuento = 0;
+
+	if (subtotal>=100)
+	{
+		Descuento = subtotal * 0.10;
+	}
+
+	let total = subtotal - Descuento
+
+    resultado += "El producto es: " + producto + "<br>";
+    resultado += "La cantidad es: " + cantidad + "<br>";
+    resultado += "El precio es: " + precio + "<br>";
+    resultado  += "________" + "<br>";
+	resultado += "El subtotal es: " + subtotal + "<br>";
+	resultado += "El descuento es: " + Descuento + "<br>";
+	resultado += "El total a pagar es: " + total + "<br>"
+
+	//1 Crear variable
+	//2 Comprobar si corresponde al descuento (if)
+	//3 Calcular el total
+
+
+	document.getElementById("resultado").innerHTML = resultado;
+	</script>
+
+</body>
+</html>
